@@ -2,10 +2,14 @@
 import Menu from "./components/Menu.vue";
 import AutoComplete from 'primevue/autocomplete';
 import instance from "./Api/instance.js";
+import Test from "./components/Test.vue";
+import Profile from "./components/Profile.vue";
 export default {
   components: {
     Menu,
-    AutoComplete
+    AutoComplete,
+    Profile,
+    Test
   },
   data() {
     return {
@@ -57,10 +61,12 @@ export default {
         Ссылка на тг-бота
       </div>
       <div v-if="activeTab === 'docs'" class="tab-content">
-        📄 Здесь находятся документы.
+        <Test>
+
+        </Test>
       </div>
       <div v-if="activeTab === 'profile'" class="tab-content">
-        👤 Это ваш профиль.
+        <Profile></Profile>
       </div>
     </div>
   </div>
