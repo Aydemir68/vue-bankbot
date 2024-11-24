@@ -1,72 +1,51 @@
 <script>
 import Menu from "./components/Menu.vue";
-import AutoComplete from 'primevue/autocomplete';
-import instance from "./Api/instance.js";
-import Test from "./components/Test.vue";
 import Profile from "./components/Profile.vue";
+import Test from "./components/Test.vue";
+import News from "./components/News.vue";
+//import Chat from "./components/Chat.vue";
 export default {
   components: {
     Menu,
-    AutoComplete,
     Profile,
-    Test
+    Test,
+    News,
+    //Chat
   },
   data() {
     return {
-      activeTab: "home", // Вкладка по умолчанию
-      userData: null
+      activeTab: "news", // Вкладка по умолчанию
     };
   },
   methods: {
-    post_data: function ()
-    {
-      let tg = window.Telegram.WebApp;
-      instance.post("user/auth", null, {params: {init_data: tg.initData}}).then(res => {
-        this.userData = res.data;
-      }).catch(err => {
-        this.userData = null;
-      });
-      console.log(tg.initData)
-    },
-    updateTab(newTab) {
-      this.activeTab = newTab; // Обновляем вкладку
-
-    },
+  updateTab(newTab) {
+    console.log("Смена вкладки на:", newTab); // Отладка
+    this.activeTab = newTab;
   },
-  beforeMount(){
-    this.post_data()
-  },
+},
 };
-
 </script>
 
 <template>
-
   <div class="flex h-screen w-full flex-col">
-
+    <!-- Компонент Menu -->
     <Menu :activeTab="activeTab" @update-tab="updateTab" />
 
-
+    <!-- Контент -->
     <div class="content-container">
-      <div v-if="activeTab === 'home'" class="tab-content">
-        <div v-if="userData !== null">
-          Добро пожаловать, {{userData.username}}!
-        </div>
-        <div v-else>
-           Выйди отсюда, розбийник!
-        </div>
-
+      <div v-if="activeTab === 'news'" :key="activeTab" class="tab-content">
+        <News>
+        </News>
       </div>
-      <div v-if="activeTab === 'help'" class="tab-content">
-        Ссылка на тг-бота
+      <div v-if="activeTab === 'help'" :key="activeTab" class="tab-content">
+        <Chat>
+        </Chat>
       </div>
-      <div v-if="activeTab === 'docs'" class="tab-content">
-        <Test>
-
-        </Test>
+      <div v-if="activeTab === 'docs'" :key="activeTab" class="tab-content">
+        <Test/>
       </div>
-      <div v-if="activeTab === 'profile'" class="tab-content">
-        <Profile></Profile>
+      <div v-if="activeTab === 'profile'" :key="activeTab" class="tab-content">
+        <Profile/>
       </div>
     </div>
   </div>
@@ -76,7 +55,6 @@ export default {
 .content-container {
   flex: 1;
   padding: 20px;
-  color: white;
 }
 
 .tab-content {
@@ -85,4 +63,7 @@ export default {
   margin-top: 20px;
 }
 
+div{
+  background-color: #2A3F4F;
+}
 </style>

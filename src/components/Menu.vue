@@ -62,6 +62,8 @@ export default {
     <ButtonGroup class="button-group">
       <Button
           class="flex-button custom-button"
+          :class="{ active: activeTab === 'help' }"
+          @click="selectTab('news')"
       >
         <div class="button-content">
           <i class="pi pi-book"></i>

@@ -29,11 +29,12 @@
 
   <!-- Контент в зависимости от выбранной категории -->
   <div v-if="selectedCategory === 'events'" class="events">
-    <ul>
-      <li>15.12.2024 - Вебинар по финансовой грамотности</li>
-      <li>20.12.2024 - Совещание с командой</li>
-      <li>25.12.2024 - Подведение итогов года</li>
-    </ul>
+        <h3>Запланированные мероприятия</h3>
+        <ul>
+          <li>15.12.2024 - Вебинар по финансовой грамотности</li>
+          <li>20.12.2024 - Совещание с командой</li>
+          <li>25.12.2024 - Подведение итогов года</li>
+        </ul>
   </div>
 
   <div v-if="selectedCategory === 'statistics'" class="statistics">
@@ -61,7 +62,7 @@ export default {
         userName: 'ivanov123',
         age: 30,
         region: 'Москва',
-        photoUrl: 'https://via.placeholder.com/100' // Ссылка на фото профиля
+        photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKaiKiPcLJj7ufrj6M2KaPwyCT4lDSFA5oog&s' // Ссылка на фото профиля
       },
       selectedCategory: 'events' // Начальная выбранная категория
     };
@@ -89,7 +90,7 @@ export default {
   border-radius: 8px;
   width: 100%;
   max-width: 600px; /* Ограничиваем ширину */
-  background-color: #2a3f4f; /* Темный фон */
+  background-color: #1c2d3a; /* Темный фон */
   color: white; /* Белый текст */
   flex-wrap: wrap; /* Для адаптивности */
 }
@@ -114,7 +115,7 @@ export default {
 
 .edit-profile button {
   padding: 8px 16px; /* Уменьшаем отступы на кнопке */
-  background-color: #1c2d3a;
+  background-color: #294b64;
   color: white;
   border: none;
   border-radius: 5px;
@@ -123,15 +124,19 @@ export default {
 }
 
 .edit-profile button:hover {
-  background-color: #0d1a23;
+  background-color: #5da2d3;
 }
 
+
 .user-info {
-  flex: 1;
-  font-size: 18px; /* Уменьшаем размер текста */
-  line-height: 1.4;
-  max-width: 300px; /* Ограничиваем ширину блока с текстом */
-}
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .user-info p {
+    margin: 5px 0;
+  }
 
 h3 {
   font-size: 16px; /* Уменьшаем размер шрифта для заголовков */
@@ -141,7 +146,7 @@ h3 {
 .events, .statistics, .topics {
   margin-top: 20px;
   padding: 10px;
-  background-color: #334c61;
+  background-color: #0a131b;
   border-radius: 8px;
   color: white;
   font-size: 14px; /* Уменьшаем размер текста */
@@ -167,16 +172,46 @@ h3 {
 select {
   padding: 8px;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #1c2d3a;
+  border: 1px;
+  background-color:#1c2d3a;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 select option {
   background-color: #2a3f4f;
   color: white;
 }
+
+.events, .statistics, .topics {
+    padding: 20px;
+    background-color: #1c2d3a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  p {
+    font-size: 14px;
+    color: white;
+  }
 
 @media (max-width: 768px) {
   .user-profile {

@@ -126,12 +126,11 @@ export default {
 /* Стили для контейнера списка */
 .file-list {
   padding: 20px;
-  background-color: #2a3f4f; /* Тёмный фон */
-  border-radius: 5px;
+  background-color: #1c2d3a; /* Тёмный фон */
+  border-radius: 8px;
   max-width: 400px;
   margin: 20px auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: none; /* Убираем рамку у контейнера */
+  
 }
 
 /* Заголовок списка */
@@ -160,7 +159,7 @@ export default {
 }
 
 .sort-buttons button {
-  background-color: #1c2d3a;
+  background-color: #294b64;
   color: white;
   border: none; /* Убираем рамку у кнопок */
   padding: 10px;
@@ -173,7 +172,7 @@ export default {
 }
 
 .sort-buttons button:hover {
-  background-color: #2a3f4f;
+  background-color: #5da2d3;
 }
 
 /* Убираем маркеры и отступы у списка */
@@ -191,10 +190,9 @@ export default {
   padding: 10px 0; /* Отступы между элементами */
   color: white; /* Белый текст */
   background: none; /* Убираем фон */
-  border: none; /* Убираем рамки */
-  box-shadow: none; /* Убираем тени */
+  border-bottom: 1px solid #444; /*разделитель*/
   cursor: pointer;
-  margin-bottom: 10px; /* Добавляем отступ между тестами */
+  /* Добавляем отступ между тестами */
 }
 
 .file-item:hover {
