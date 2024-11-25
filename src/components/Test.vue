@@ -8,28 +8,28 @@ export default {
       selectedFile: null, // Выбранный файл (тест)
       files: [
         {
-          name: "Банковская безопасность и защита данных",
+          name: "Банковская безопасность и защита данных ",
           date: "23.11.2024",
           isPassed: true,
           correctPercentage: 85,
           attempts: 3,
         },
         {
-          name: "Работа с корпоративными клиентами",
+          name: "Работа с корпоративными клиентами ",
           date: "29.11.2024",
           isPassed: false,
           correctPercentage: 0,
           attempts: 1,
         },
         {
-          name: "Операции с ипотечными кредитами",
+          name: "Операции с ипотечными кредитами ",
           date: "01.12.2024",
           isPassed: true,
           correctPercentage: 92,
           attempts: 2,
         },
         {
-          name: "Оценка и работа с рисками инвестиций",
+          name: "Оценка и работа с рисками инвестиций ",
           date: "10.12.2024",
           isPassed: true,
           correctPercentage: 78,

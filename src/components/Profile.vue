@@ -127,7 +127,6 @@ export default {
   background-color: #5da2d3;
 }
 
-
 .user-info {
     flex: 1;
     font-size: 16px;
@@ -181,6 +180,8 @@ select {
 select option {
   background-color: #2a3f4f;
   color: white;
+  border-radius: 5px;
+  border:none;
 }
 
 .events, .statistics, .topics {

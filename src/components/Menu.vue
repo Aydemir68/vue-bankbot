@@ -132,7 +132,7 @@ export default {
 }
 
 .custom-button {
-    background-color: #2A3F4F !important;
+  background-color: #2A3F4F !important;
   color: rgba(228, 228, 228, 0.865) !important;
   border: none !important;
 }
