@@ -3,14 +3,14 @@ import Menu from "./components/Menu.vue";
 import Profile from "./components/Profile.vue";
 import Test from "./components/Test.vue";
 import News from "./components/News.vue";
-//import Chat from "./components/Chat.vue";
+import Chat from "./components/Chat.vue";
 export default {
   components: {
     Menu,
     Profile,
     Test,
     News,
-    //Chat
+    Chat
   },
   data() {
     return {
@@ -34,12 +34,10 @@ export default {
     <!-- Контент -->
     <div class="content-container">
       <div v-if="activeTab === 'news'" :key="activeTab" class="tab-content">
-        <News>
-        </News>
+        <News/>
       </div>
       <div v-if="activeTab === 'help'" :key="activeTab" class="tab-content">
-        <Chat>
-        </Chat>
+        <Chat/>
       </div>
       <div v-if="activeTab === 'docs'" :key="activeTab" class="tab-content">
         <Test/>
