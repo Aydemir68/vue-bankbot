@@ -77,6 +77,7 @@ export default {
 </script>
 <style scoped>
 /* Устанавливаем один шрифт для всей страницы */
+
 * {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -86,7 +87,7 @@ export default {
 .user-profile {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 2vh;
   border-radius: 8px;
   width: 100%;
   max-width: 600px; /* Ограничиваем ширину */
@@ -99,8 +100,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center; /* Центрируем фото и кнопку */
-  margin-right: 20px; /* Отступ между фото и информацией */
-  margin-bottom: 20px; /* Отступ снизу для маленьких экранов */
+  margin-right: 2vh; /* Отступ между фото и информацией */
+  margin-bottom: 2vh; /* Отступ снизу для маленьких экранов */
 }
 
 .profile-photo {
@@ -110,17 +111,17 @@ export default {
 }
 
 .edit-profile {
-  margin-top: 10px;
+  margin-top: 1vh;
 }
 
 .edit-profile button {
-  padding: 8px 16px; /* Уменьшаем отступы на кнопке */
+  padding: 1.2vh 2vh; /* Уменьшаем отступы на кнопке */
   background-color: #294b64;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px; /* Уменьшаем размер шрифта */
+  font-size: 1.6vh; /* Уменьшаем размер шрифта */
 }
 
 .edit-profile button:hover {
@@ -129,12 +130,12 @@ export default {
 
 .user-info {
     flex: 1;
-    font-size: 16px;
+    font-size: 2vh;
     color: #333;
   }
   
   .user-info p {
-    margin: 5px 0;
+    margin: 1vh 0;
   }
 
 h3 {
@@ -164,7 +165,7 @@ h3 {
 }
 
 .dropdown {
-  margin-top: 20px;
+  margin-top: 2.2vh;
   color: white;
 }
 
@@ -185,7 +186,7 @@ select option {
 }
 
 .events, .statistics, .topics {
-    padding: 20px;
+    padding: 4vh;
     background-color: #1c2d3a;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;

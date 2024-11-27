@@ -47,7 +47,16 @@
   </script>
   
   <style> 
- 
+
+  
+  html, body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center;    /* Центрирование по вертикали */
+}
+
   .chat-container { 
   background-color: #2A3F4F; 
   color: white; 
@@ -55,7 +64,7 @@
   display: flex; 
   flex-direction: column; 
   height: 100vh;
-  width: 300px;
+  width: 40vh;
 } 
    
   .messages { 
@@ -63,7 +72,7 @@
     background-color:#1c2d3a; /* #2A3F4F; */
     padding: 10px; 
     border-radius: 8px; 
-    max-height: 740px; 
+    max-height: 80%; 
     overflow-y: auto; /* Позволяет прокручивать сообщения */ 
     margin-bottom: 10px;
   } 
@@ -104,15 +113,20 @@
     color: white; /* Цвет текста в поле */ 
   } 
    
-  .send-button { 
-    background-color: #1c2d3a; 
-    color: white; 
-    border: none; 
-    width: 50px; 
-    border-radius: 5px; 
-    height: 50px;
-    cursor: pointer; 
-  } 
+  .send-button {  
+  display: flex; /* Используем flex для центрирования содержимого */
+  justify-content: center; /* Центровка по горизонтали */
+  align-items: center; /* Центровка по вертикали */
+  background-color: #1c2d3a;  
+  color: white;  
+  border: none;  
+  width: 50px;  
+  border-radius: 5px;  
+  height: 50px; 
+  cursor: pointer; /* Указатель мыши при наведении */
+}
+
+
    
   .send-button:hover { 
     background-color: #5da2d3; 

@@ -38,27 +38,31 @@
   <style scoped>
   /* Стили контейнера новостей */
   .news-list {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 100%;
+    margin: 2vh auto;
+    margin-top: 2vh;
+    padding: 2.5vh;
     background-color: #1c2d3a; /* Тёмный фон */
     border-radius: 8px;
     color: white; /* Белый текст */
     font-family: Arial, sans-serif;
+    height: 90vh;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
   }
 
   /* Заголовок новостного раздела */
   .news-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 3.1vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
     text-align: center;
   }
 
   /* Элемент одной новости */
   .news-item {
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
     border-bottom: 1px solid #444; /* Разделительная линия */
-    padding-bottom: 15px;
+    padding-bottom: 2vh;
   }
 
   /* Контейнер текста новости */
@@ -76,18 +80,18 @@
   /* Изображение новости */
   .news-image {
     width: 100%;
-    max-width: 400px; /* Ограничение максимального размера изображения */
+    max-width: 40vh; /* Ограничение максимального размера изображения */
     height: auto; /* Сохраняем пропорции изображения */
     border-radius: 8px;
-    margin: 0 auto 15px; /* Центровка и отступы */
+    margin: 0 auto 2vh; /* Центровка и отступы */
     display: block; /* Для работы margin: auto */
   }
 
   /* Текст описания новости */
   .news-description {
-    font-size: 1rem;
-    color: #ccc;
-    margin-top: 10px;
+    font-size: 2.1vh;
+    color: #e6e6e6;
+    margin-top: 1.2vh;
   }
 
   /* Добавляем стили для кнопки */
@@ -96,10 +100,10 @@
     color: white; /* Цвет текста кнопки */
     border: none; /* Убираем рамку */
     border-radius: 5px; /* Закругленные края */
-    padding: 10px 20px; /* Отступы */
-    font-size: 1rem; /* Размер шрифта */
+    padding: 1.2vh 2.6vh; /* Отступы */
+    font-size: 2vh; /* Размер шрифта */
     cursor: pointer; /* Указатель при наведении */
-    transition: background-color 0.3s; /* Плавный переход цвета */
+
   }
 
   .schedule-button:hover {

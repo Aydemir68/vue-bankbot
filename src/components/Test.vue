@@ -125,19 +125,22 @@ export default {
 <style scoped>
 /* Стили для контейнера списка */
 .file-list {
-  padding: 20px;
+  padding: 3vh;
   background-color: #1c2d3a; /* Тёмный фон */
   border-radius: 8px;
-  max-width: 400px;
-  margin: 20px auto;
-  
+  max-width: 50vh;
+  margin: 2vh auto;
+  max-height: 90vh;
+  overflow-y: auto; /* Добавляем вертикальную прокрутку */
 }
 
 /* Заголовок списка */
+
+
 .file-list-title {
-  font-size: 1.5rem;
+  font-size: 3vh;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 1.5vh;
   color: white; /* Белый текст */
 }
 
@@ -145,15 +148,15 @@ export default {
 .search-bar {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 2vh;
   border: none; /* Убираем рамку */
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 2vh;
 }
 
 /* Кнопки сортировки */
 .sort-buttons {
-  margin-bottom: 15px;
+  margin-bottom: 2vh;
   display: flex;
   justify-content: space-between;
 }
@@ -162,13 +165,12 @@ export default {
   background-color: #294b64;
   color: white;
   border: none; /* Убираем рамку у кнопок */
-  padding: 10px;
+  padding: 1.2vh;
   border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  flex-grow: 1;
-  margin: 0 5px;
-  text-align: center;
+  font-size: 2vh;
+  /*flex-grow: 1;*/
+  margin: 0 1vh;
+  align-items: center;
 }
 
 .sort-buttons button:hover {
@@ -180,6 +182,7 @@ export default {
   list-style-type: none; /* Убираем стандартные маркеры */
   padding: 0;
   margin: 0;
+  font-size: 1vh;
 }
 
 /* Стили для элементов списка */
@@ -187,7 +190,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px 0; /* Отступы между элементами */
+  padding: 1.2vh 0; /* Отступы между элементами */
   color: white; /* Белый текст */
   background: none; /* Убираем фон */
   border-bottom: 1px solid #444; /*разделитель*/
@@ -201,30 +204,30 @@ export default {
 
 /* Иконка файла */
 .pi-file {
-  font-size: 1.5rem;
+  font-size: 3.5vh;
   color: white; /* Белая иконка */
 }
 
 /* Название файла */
 .file-name {
-  margin-left: 10px;
-  font-size: 1.1rem;
+  margin-left: 2vh;
+  font-size: 2.2vh;
 }
 
 /* Дополнительная информация о файле */
 .file-info {
-  font-size: 0.9rem;
+  font-size: 2.2vh;
   color: lightgray;
 }
 
 /* Информация о тесте */
 .test-details {
-  margin-top: 10px;
+  margin-top: 1vh;
   color: lightgray;
 }
 
 .test-details p {
-  margin: 5px 0;
-  font-size: 0.9rem;
+  margin: 0.5vh 0;
+  font-size: 2vh;
 }
 </style>

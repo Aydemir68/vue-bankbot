@@ -52,16 +52,24 @@ export default {
 <style scoped>
 .content-container {
   flex: 1;
-  padding: 20px;
+  height: 100vh;
 }
 
 .tab-content {
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2vh;
 }
 
 div{
   background-color: #2A3F4F;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center;    /* Центрирование по вертикали */
 }
 </style>

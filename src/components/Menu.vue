@@ -105,6 +105,10 @@ export default {
 </template>
 
 <style>
+
+
+
+
 .button-container {
   position: fixed;
   bottom: 0;
