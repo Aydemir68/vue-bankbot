@@ -4,13 +4,15 @@ import Profile from "./components/Profile.vue";
 import Test from "./components/Test.vue";
 import News from "./components/News.vue";
 import Chat from "./components/Chat.vue";
+import Opros_vhod from "./components/Opros_vhod.vue";
 export default {
   components: {
     Menu,
     Profile,
     Test,
     News,
-    Chat
+    Chat,
+    Opros_vhod
   },
   data() {
     return {
@@ -28,10 +30,11 @@ export default {
 
 <template>
   <div class="flex h-screen w-full flex-col">
+    <Opros_vhod></Opros_vhod>
     <!-- Компонент Menu -->
-    <Menu :activeTab="activeTab" @update-tab="updateTab" />
+<!--    <Menu :activeTab="activeTab" @update-tab="updateTab" />
 
-    <!-- Контент -->
+
     <div class="content-container">
       <div v-if="activeTab === 'news'" :key="activeTab" class="tab-content">
         <News/>
@@ -45,7 +48,7 @@ export default {
       <div v-if="activeTab === 'profile'" :key="activeTab" class="tab-content">
         <Profile/>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

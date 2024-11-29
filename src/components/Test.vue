@@ -116,6 +116,7 @@ export default {
           <p><strong>Статус:</strong> {{ file.isPassed ? 'Пройден' : 'Не пройден' }}</p>
           <p><strong>Процент правильных ответов:</strong> {{ file.correctPercentage }}%</p>
           <p><strong>Количество попыток:</strong> {{ file.attempts }}</p>
+          <button class="start-test-button" @click.stop="startTest(file)">Пройти</button>
         </div>
       </li>
     </ul>
@@ -229,5 +230,19 @@ export default {
 .test-details p {
   margin: 0.5vh 0;
   font-size: 2vh;
+}
+
+button {
+  background-color: #294b64; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  border: none; /* Убираем рамку */
+  border-radius: 5px; /* Закругленные края */
+  padding: 1.2vh 2.6vh; /* Отступы */
+  font-size: 2vh; /* Размер шрифта */
+}
+
+button:hover {
+  background-color: #5da2d3; /* Цвет фона при наведении */
+  border: none;
 }
 </style>

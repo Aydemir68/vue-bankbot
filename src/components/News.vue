@@ -102,8 +102,6 @@
     border-radius: 5px; /* Закругленные края */
     padding: 1.2vh 2.6vh; /* Отступы */
     font-size: 2vh; /* Размер шрифта */
-    cursor: pointer; /* Указатель при наведении */
-
   }
 
   .schedule-button:hover {

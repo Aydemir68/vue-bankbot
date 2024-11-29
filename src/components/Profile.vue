@@ -12,7 +12,7 @@
     <!-- Информация о пользователе -->
     <div class="user-info">
       <p><strong>ФИО:</strong> {{ user.fullName }}</p>
-      <p><strong>Имя пользователя:</strong> {{ user.userName }}</p>
+      <p><strong>Имя пользователя:</strong> {{ this.username }}</p>
       <p><strong>Возраст:</strong> {{ user.age }}</p>
       <p><strong>Регион:</strong> {{ user.region }}</p>
     </div>
@@ -54,9 +54,11 @@
 </template>
 
 <script>
+import instance from "../Api/instance.js";
 export default {
   data() {
     return {
+      username: null,
       user: {
         fullName: 'Иванов Иван Иванович',
         userName: 'ivanov123',
@@ -67,12 +69,23 @@ export default {
       selectedCategory: 'events' // Начальная выбранная категория
     };
   },
+
   methods: {
     editProfile() {
       // Логика редактирования профиля
       console.log("Редактировать профиль");
-    }
-  }
+    },
+    post_User_data: function() {
+      let tg = window.Telegram.WebApp;
+      instance.post('/user/auth', null,{params:{init_data: tg.initData}}).then(res => {
+        this.username = res.data.username;
+      })
+    },
+
+  },
+  beforeMount() {
+    this.post_User_data()
+  },
 };
 </script>
 <style scoped>
