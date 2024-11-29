@@ -6,6 +6,7 @@ import News from "./components/News.vue";
 import Chat from "./components/Chat.vue";
 import Opros_vhod from "./components/Opros_vhod.vue";
 export default {
+
   components: {
     Menu,
     Profile,
@@ -30,8 +31,10 @@ export default {
 
 <template>
   <div class="flex h-screen w-full flex-col">
+
     <!--<Opros_vhod></Opros_vhod> -->
-    <!-- Компонент Menu -->
+    <!-- Компонент Menu -->'
+    <router-view></router-view>
       <Menu :activeTab="activeTab" @update-tab="updateTab" />
 
 
@@ -44,6 +47,8 @@ export default {
       </div>
       <div v-if="activeTab === 'docs'" :key="activeTab" class="tab-content">
         <Test/>
+          <RouterView>
+          </RouterView>
       </div>
       <div v-if="activeTab === 'profile'" :key="activeTab" class="tab-content">
         <Profile/>

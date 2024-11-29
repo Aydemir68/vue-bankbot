@@ -64,6 +64,7 @@ export default {
       region: '',
       gender: '',
       age: '',
+  pros: ['name']
     };
   },
   methods: {

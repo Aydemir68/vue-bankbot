@@ -1,5 +1,9 @@
 <script>
+import Opros_vhod from "./Opros_vhod.vue";
 export default {
+  components: {
+    Opros_vhod,
+  },
   data() {
     return {
       searchQuery: "", // Переменная для поиска
@@ -57,6 +61,9 @@ export default {
     },
   },
   methods: {
+    goToOpros() {
+      this.$router.push('/opros');
+    },
     // Меняем поле и порядок сортировки
     sortBy(field) {
       if (this.sortByField === field) {
@@ -116,7 +123,8 @@ export default {
           <p><strong>Статус:</strong> {{ file.isPassed ? 'Пройден' : 'Не пройден' }}</p>
           <p><strong>Процент правильных ответов:</strong> {{ file.correctPercentage }}%</p>
           <p><strong>Количество попыток:</strong> {{ file.attempts }}</p>
-          <button class="start-test-button" @click.stop="startTest(file)">Пройти</button>
+
+          <button class="start-test-button" @click.stop="$emit('startOpros')">Пройти</button>
         </div>
       </li>
     </ul>
