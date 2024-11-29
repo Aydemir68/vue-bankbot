@@ -30,9 +30,9 @@ export default {
 
 <template>
   <div class="flex h-screen w-full flex-col">
-    <Opros_vhod></Opros_vhod>
+    <!--<Opros_vhod></Opros_vhod> -->
     <!-- Компонент Menu -->
-<!--    <Menu :activeTab="activeTab" @update-tab="updateTab" />
+      <Menu :activeTab="activeTab" @update-tab="updateTab" />
 
 
     <div class="content-container">
@@ -48,7 +48,7 @@ export default {
       <div v-if="activeTab === 'profile'" :key="activeTab" class="tab-content">
         <Profile/>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
