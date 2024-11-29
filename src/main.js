@@ -8,7 +8,7 @@ import './style.css'
 import '/node_modules/primeflex/primeflex.css'
 import 'primeflex/themes/primeone-light.css'
 import 'primeicons/primeicons.css'
-import VueRouter from 'vue-router'
+import router from './router/index.js'
 
 const app = createApp(App);
 app.use(PrimeVue, {
@@ -21,5 +21,5 @@ app.use(PrimeVue, {
         }
     }
 });
-app.use(VueRouter);
+app.use(router);
 app.mount('#app');

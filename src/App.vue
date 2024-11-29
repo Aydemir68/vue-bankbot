@@ -1,5 +1,5 @@
 <script>
-import Menu from "./components/Menu.vue";
+import Menu from "primevue/menu"
 import Profile from "./components/Profile.vue";
 import Test from "./components/Test.vue";
 import News from "./components/News.vue";
@@ -17,7 +17,29 @@ export default {
   },
   data() {
     return {
-      activeTab: "news", // Вкладка по умолчанию
+      items: [
+        {
+          label: 'Новости',
+          icon: 'pi pi-home',
+          link: '/news'
+        },
+        {
+          label: 'ИИ',
+          icon: 'pi pi-search',
+          link: '/chat'
+        },
+        {
+          label: 'Опросы',
+          icon: 'pi pi-bolt',
+          link: '/test'
+        },
+        {
+          label: 'Профиль',
+          icon: 'pi pi-user',
+          link: '/user'
+        },
+
+      ]
     };
   },
   methods: {
@@ -30,43 +52,53 @@ export default {
 </script>
 
 <template>
-  <div class="flex h-screen w-full flex-col">
-
-    <!--<Opros_vhod></Opros_vhod> -->
-    <!-- Компонент Menu -->'
-    <router-view></router-view>
-      <Menu :activeTab="activeTab" @update-tab="updateTab" />
-
-
+  <div class="app-container">
+    <RouterView />
     <div class="content-container">
-      <div v-if="activeTab === 'news'" :key="activeTab" class="tab-content">
-        <News/>
-      </div>
-      <div v-if="activeTab === 'help'" :key="activeTab" class="tab-content">
-        <Chat/>
-      </div>
-      <div v-if="activeTab === 'docs'" :key="activeTab" class="tab-content">
-        <Test/>
-          <RouterView>
-          </RouterView>
-      </div>
-      <div v-if="activeTab === 'profile'" :key="activeTab" class="tab-content">
-        <Profile/>
+      <!-- Содержимое вкладок -->
+    </div>
+    <div class="menu-container">
+      <div class="menu-items">
+        <div v-for="i in items" :key="i">
+          <RouterLink :to="i.link" class="menu-link">
+            <span :class="i.icon" />
+            <span class="ml-2">{{ i.label }}</span>
+          </RouterLink>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.content-container {
-  flex: 1;
+.app-container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
-.tab-content {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 2vh;
+.content-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.menu-container {
+  background-color: #2A3F4F;
+  padding: 10px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
 }
 
 div{

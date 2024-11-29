@@ -6,6 +6,7 @@ export default {
   },
   data() {
     return {
+      link: "/test/test",
       searchQuery: "", // Переменная для поиска
       sortByField: "name", // Поле для сортировки (по умолчанию "name")
       sortOrder: 1, // Порядок сортировки: 1 для возрастания, -1 для убывания
@@ -124,7 +125,10 @@ export default {
           <p><strong>Процент правильных ответов:</strong> {{ file.correctPercentage }}%</p>
           <p><strong>Количество попыток:</strong> {{ file.attempts }}</p>
 
-          <button class="start-test-button" @click.stop="$emit('startOpros')">Пройти</button>
+          <button class="start-test-button" @click.stop="$emit('startOpros')">Пройти<RouterLink :to="this.link" class="flex px-4 py-2 items-center cursor-pointer hover:text-white
+                          active:bg-black-alpha-10 text-gray-900 no-underline">
+            </RouterLink>
+          </button>
         </div>
       </li>
     </ul>
