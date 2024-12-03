@@ -13,7 +13,7 @@
           class="input"
           placeholder="Сообщение..."
         />
-        <button @click="sendMessage" class="send-button">
+        <button @click="sendMessage" class="">
           <i class="pi pi-send"></i>
         </button>
       </div>
@@ -46,93 +46,5 @@
   };
   </script>
   
-  <style> 
-
-  
-  html, body {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center;    /* Центрирование по вертикали */
-}
-
-  .chat-container { 
-  background-color: #2A3F4F; 
-  color: white; 
-  border-radius: 8px; 
-  display: flex; 
-  flex-direction: column; 
-  height: 100vh;
-  width: 40vh;
-} 
-   
-  .messages { 
-    flex: 1; /* Позволяет занимать все доступное пространство */ 
-    background-color:#1c2d3a; /* #2A3F4F; */
-    padding: 10px; 
-    border-radius: 8px; 
-    max-height: 80%; 
-    overflow-y: auto; /* Позволяет прокручивать сообщения */ 
-    margin-bottom: 10px;
-  } 
-   
-  .message { 
-    margin: 5px 0; 
-    padding: 10px; 
-    border-radius: 8px; 
-    max-width: 70%; /* Ограничение ширины сообщений */ 
-  } 
-   
-  .user-message { 
-    background-color: #009688; /* Цвет для сообщений пользователя */ 
-    color: white; 
-    margin-left: auto; /* Выравнивание вправо */ 
-    font-size: medium; 
-  } 
-   
-  .bot-message { 
-    background-color: #3A4F5F; /* Цвет для ответов бота */ 
-    color: white; 
-    margin-right: auto; /* Выравнивание влево */ 
-    font-size: medium; 
-  } 
-   
-  .input-container { 
-    display: flex;
-  } 
-  
-  .input { 
-    flex: 1; 
-    padding: 10px; 
-    border: none; 
-    height: 50px; 
-    border-radius: 5px; 
-    margin-right: 10px; 
-    background-color: #1c2d3a; /* Цвет фона поля ввода */ 
-    color: white; /* Цвет текста в поле */ 
-  } 
-   
-  .send-button {  
-  display: flex; /* Используем flex для центрирования содержимого */
-  justify-content: center; /* Центровка по горизонтали */
-  align-items: center; /* Центровка по вертикали */
-  background-color: #1c2d3a;  
-  color: white;  
-  border: none;  
-  width: 50px;  
-  border-radius: 5px;  
-  height: 50px; 
-  cursor: pointer; /* Указатель мыши при наведении */
-}
-
-
-   
-  .send-button:hover { 
-    background-color: #5da2d3; 
-  } 
- 
-  .send-button:active { 
-    background-color: #295574; 
-  } 
-  </style>
+<style>
+</style>

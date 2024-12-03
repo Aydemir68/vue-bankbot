@@ -52,64 +52,20 @@ export default {
 </script>
 
 <template>
-  <div class="app-container">
-    <RouterView />
-    <div class="content-container">
-      <!-- Содержимое вкладок -->
+  <div class="text-gray-100">
+    <div class="flex flex-column h-full">
+      <RouterView />
     </div>
-    <div class="menu-container">
-      <div class="menu-items">
-        <div v-for="i in items" :key="i">
-          <RouterLink :to="i.link" class="menu-link">
-            <span :class="i.icon" />
-            <span class="ml-2">{{ i.label }}</span>
-          </RouterLink>
-        </div>
+    <div class="flex justify-content-center align-items-end">
+      <div v-for="i in items" :key="i">
+        <RouterLink :to="i.link" class="">
+          <span :class="i.icon" />
+          <span class="ml-2">{{ i.label }}</span>
+        </RouterLink>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.app-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.content-container {
-  flex: 1;
-  overflow-y: auto;
-}
-
-.menu-container {
-  background-color: #2A3F4F;
-  padding: 10px;
-}
-
-.menu-items {
-  display: flex;
-  justify-content: space-around;
-}
-
-.menu-link {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1rem;
-}
-
-div{
-  background-color: #2A3F4F;
-}
-
-html, body {
-  margin: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center;    /* Центрирование по вертикали */
-}
 </style>
